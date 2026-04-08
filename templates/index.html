@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block title %}Beranda - Forward Chaining Komputer{% endblock %}
+
+{% block content %}
+<header class="py-5 mb-5 text-center">
+  <div class="container py-5">
+    <h1 class="display-3 fw-bold mb-3">Forward Chaining</h1>
+    <p class="fs-5 text-muted mb-5">Sistem identifikasi kerusakan komputer berdasarkan gejala yang ditemukan.</p>
+    <a href="{{ url_for('forward') }}" class="btn btn-dark btn-lg px-5 py-3 rounded-0">
+      Mulai Diagnosa
+    </a>
+  </div>
+</header>
+
+<section class="container mb-5">
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-md-4">
+      <div class="p-4 border-top border-dark">
+        <h6 class="fw-bold mb-3">1. Pilih Gejala</h6>
+        <p class="text-muted small">Anda menandai daftar gejala yang muncul pada komputer Anda saat ini.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="p-4 border-top border-dark">
+        <h6 class="fw-bold mb-3">2. Proses Forward Chaining</h6>
+        <p class="text-muted small">Sistem mencocokkan gejala tersebut dengan aturan yang ada di basis data pakar.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="p-4 border-top border-dark">
+        <h6 class="fw-bold mb-3">3. Hasil Diagnosa</h6>
+        <p class="text-muted small">Sistem memberikan kesimpulan jenis kerusakan beserta solusi perbaikannya.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="container py-5 border-top">
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+      <p class="small text-secondary">
+        Forward Chaining adalah metode pencarian yang dimulai dari fakta (gejala) menuju ke kesimpulan (kerusakan).
+        Sistem akan terus mencari kecocokan hingga ditemukan hasil akhir yang sesuai dengan data Anda.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Desain flat tanpa lekukan */
+  .btn,
+  .border {
+    border-radius: 0 !important;
+  }
+
+  h1 {
+    letter-spacing: -1px;
+  }
+</style>
+{% endblock %}
